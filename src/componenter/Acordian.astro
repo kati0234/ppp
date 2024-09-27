@@ -1,0 +1,95 @@
+---
+import { Image } from "astro:assets";
+import porter from "../assets/images/porter.png";
+import AccordianItem from "./Acordianitem.astro";
+---
+
+<div class="grid">
+  <div class="accordion-container">
+    <div>
+      <div class="content">
+        <div class="img-container">
+          <Image src={porter} alt="/" />
+        </div>
+      </div>
+      <ul>
+        <AccordianItem
+          question="portefolie"
+          answer="Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements."
+        />
+      </ul>
+    </div>
+    <div>
+      <div class="content">
+        <div class="img-container">
+          <Image src={porter} alt="/" />
+        </div>
+      </div>
+      <ul>
+        <AccordianItem
+          question="portefolie"
+          answer="Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements."
+        />
+      </ul>
+    </div>
+  </div>
+</div>
+<style>
+  .accordion-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.375rem;
+    align-items: center;
+  }
+  .p-bg {
+    text-align: center;
+  }
+  section {
+    padding-block: 3rem;
+    /* background: #f5f5f5; */
+    border-radius: 1.875rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 1rlh;
+    max-width: 725px;
+    margin-inline: auto;
+  }
+</style>
+
+<script>
+  // @ts-nocheck
+  const accordionWrappers = document.querySelectorAll(".accordion-container");
+
+  accordionWrappers.forEach((accordionWrapper) => {
+    accordionWrapper.addEventListener("click", (event) => {
+      const button = event.target;
+      const article = button.closest("article");
+      const exclusive = accordionWrapper.dataset.exclusive;
+
+      if (!article || button.tagName.toLowerCase() !== "button") {
+        return;
+      }
+
+      const expanded = button.getAttribute("aria-expanded") === "true" || false;
+
+      if (exclusive === "true") {
+        const currentExpanded = accordionWrapper.querySelector(
+          '[aria-expanded="true"]'
+        );
+
+        if (currentExpanded && currentExpanded !== button) {
+          currentExpanded.setAttribute("aria-expanded", "false");
+        }
+      }
+
+      button.setAttribute("aria-expanded", !expanded);
+    });
+  });
+</script>

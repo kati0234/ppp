@@ -1,0 +1,192 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<div class="wap">
+  <div class="top">
+    <h2>lidt om mig</h2>
+  </div>
+  <div class="ommigscrole">
+    <section class="item1">
+      <div></div>
+      <div class="inner">
+        <div class="flex">
+          <p>
+            Jeg har altid tænkt, at jeg vil være med til at designe fremtiden,
+            men jeg har aldrig helt vist hvordan. Indtil jeg begyndte på
+            multimediedesign.
+          </p>
+          <Icon class="pil" name="pil" />
+        </div>
+      </div>
+
+      <Icon name="stjernerod" />
+    </section>
+    <section class="item2">
+      <div></div>
+      <p>
+        Her har jeg lært, hvordan man designer løsninger hved hjælp af test og
+        burger inddragelse, og jeg har arbejdet med visuelle stil og
+        designstandarder.
+      </p>
+
+      <Icon name="hvedstjerne" />
+    </section>
+    <section class="item3">
+      <div></div>
+      <div class="inner3">
+        <p>
+          Men vigtigst af alt, så har jeg fundet mit kald. Jeg har lært et nyt
+          sprog..
+        </p>
+        <strong> <p>kodning</p></strong>
+      </div>
+      <Icon name="hvedstjerne" />
+    </section>
+    <section class="item4">
+      <div></div>
+      <p>
+        Jeg brænder for at udvikle og implementere fremtidens sites. Jeg har
+        erfaring med HTML, CSS og Javascript. Jeg har arbejdet med best
+        practice, vedligeholdelsesvenlig kode og frameworks som Astro. Senere på
+        dette semester vil jeg få erfaring med Next.js og React.
+      </p>
+      <Icon name="pilto" />
+    </section>
+  </div>
+</div>
+
+<style>
+  .wap {
+    grid-column: full;
+    display: flex;
+    /* background: #ffe7e7; */
+    background: #ff9a8c;
+    /* z-index: -700; */
+  }
+  .top {
+    /* grid-column: full; */
+    width: 500px;
+    color: #000000;
+
+    /* he-cap-reg-94 */
+    font-family: Helvetica;
+    font-size: 2.875rem;
+    font-variant: light;
+    line-height: normal;
+
+    text-transform: uppercase;
+    align-self: center;
+    h2 {
+      padding: 3rem;
+      font-weight: 400;
+    }
+  }
+  .ommigscrole {
+    scroll-snap-type: inline mandatory;
+    display: flex;
+    overflow-x: auto;
+
+    /* > * {
+      flex: 1 0 70%;
+    } */
+    > * {
+      flex: 1 0 100%;
+    }
+  }
+  .item1 {
+    background: #fff;
+    /* [data-icon] {
+      width: 100px;
+    } */
+  }
+  .item2 {
+    background: linear-gradient(
+        0deg,
+        rgba(140, 43, 50, 0.17) 0%,
+        rgba(140, 43, 50, 0.17) 100%
+      ),
+      #fff;
+  }
+  .item3 {
+    color: #fff;
+    background: #8c2b32;
+  }
+  .inner3 {
+    width: fit-content;
+    place-content: center;
+    color: #fff;
+    p {
+      color: #fff;
+    }
+  }
+  strong {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3rem;
+  }
+  .item4 {
+    background: #fff;
+  }
+
+  .inner {
+    width: fit-content;
+    display: grid;
+    place-content: center;
+    justify-items: start;
+
+    /* & :last-child {
+      place-self: end;
+    } */
+  }
+  section {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+
+    block-size: 100svh;
+
+    display: grid;
+
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+
+    & :last-child {
+      place-self: end;
+    }
+  }
+
+  .lidom {
+  }
+  .lidtomone {
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+
+  .content {
+    display: grid;
+    grid-column: content;
+  }
+  p {
+    color: #86060b;
+    width: fit-content;
+    /* he-reg-64 */
+    font-family: Helvetica;
+    font-size: 2.0625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    /* text-wrap: balance; */
+    align-items: center;
+    align-self: center;
+  }
+  [data-icon] {
+    width: 60px;
+    height: auto;
+    margin: 40px;
+  }
+  [data-icon="pil"] {
+    margin: 1rem 0;
+    width: 6rem;
+  }
+</style>

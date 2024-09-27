@@ -1,0 +1,72 @@
+@layer reset, components, overrides;
+
+@import "overrids.css" layer(overrides);
+
+html {
+  --mellem-text-decoration: uppercase;
+  --hecapreg25-font-size: 25px;
+  --hecapreg25-font-family: Helvetica, sans-serif;
+  --hecapreg25-font-weight: 400;
+  --hecapreg25-text-decoration: uppercase;
+  --hereg20-font-size: 20px;
+  --hereg20-font-family: Helvetica, sans-serif;
+  --hereg20-font-weight: 400;
+  --helight15-font-size: 15px;
+  --helight15-font-family: Helvetica, sans-serif;
+  --helight15-font-weight: 300;
+  --hereg64-font-size: 65px;
+  --hereg64-font-family: Helvetica, sans-serif;
+  --hereg64-font-weight: 400;
+  --hecapreg64-font-size: 65px;
+  --hecapreg64-font-family: Helvetica, sans-serif;
+  --hecapreg64-font-weight: 400;
+  --hecapreg64-text-decoration: uppercase;
+  --hecapreg94-font-size: 94px;
+  --hecapreg94-font-family: Helvetica, sans-serif;
+  --hecapreg94-font-weight: 400;
+  --hecapreg94-text-decoration: uppercase;
+  --hereg25-font-size: 25px;
+  --hereg25-font-family: Helvetica, sans-serif;
+  --hereg25-font-weight: 400;
+  --hecapreg40-font-size: 40px;
+  --hecapreg40-font-family: Helvetica, sans-serif;
+  --hecapreg40-font-weight: 400;
+  --hecapreg40-text-decoration: uppercase;
+
+  /* slider lidt om  */
+}
+
+p {
+  font-family: Helvetica, sans-serif;
+  text-wrap: pretty;
+}
+
+html {
+  background-color: #f2dfdd;
+}
+main {
+  margin: 0 px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+
+/* body {
+  height: 100%;
+  cursor: url("../src/iconer/pil.svg"), auto;
+} */
+h3 {
+  color: #000;
+  font-family: Helvetica;
+  font-size: 5.875rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+}

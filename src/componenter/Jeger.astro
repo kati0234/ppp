@@ -1,0 +1,173 @@
+---
+import { Image } from "astro:assets";
+import Jegeronee from "../assets/images/jegeronee.jpg";
+import Jeger2 from "../assets/images/jeger2.jpeg";
+import Jeger3 from "../assets/images/jeger3.jpeg";
+import Jeger4 from "../assets/images/jeger4.png";
+import Jeger5 from "../assets/images/jeger5.jpeg";
+import Jeger6 from "../assets/images/jeger6.jpeg";
+import Jeger7 from "../assets/images/jeger7.jpeg";
+import Jeger8 from "../assets/images/jeger8.jpeg";
+import Jeger9 from "../assets/images/jeger9.jpeg";
+---
+
+<section class="jeg-er">
+  <div class="jeg_er_content">
+    <h3>jeg er..</h3>
+    <p>
+      katinka alberte stürup-pedersen jeg er 23 år, bor på vesterbro med 3
+      romies, og min ynglings favre er lysserød
+    </p>
+  </div>
+  <div class="content">
+    <div class="jeg-er-tre-ting">
+      <div class="kreativ evner">
+        <h4>kreativ</h4>
+        <p>Altid i gang med tusind projekter.</p>
+      </div>
+      <div class="Dedikeret evner">
+        <h4>Dedikeret</h4>
+        <p>Jeg er typen, der går all in.</p>
+      </div>
+      <div class="aben evner">
+        <h4>Åben</h4>
+        <p>Det er ikke noget, jeg ik kan – jeg har bare ikke lært det endnu</p>
+      </div>
+    </div>
+    <div class="grid-img">
+      <div class="grid-inner">
+        <Image width="340" src={Jegeronee} alt="/" />
+        <Image width="340" src={Jeger2} alt="/" />
+        <Image width="340" src={Jeger3} alt="/" />
+        <Image width="340" src={Jeger9} alt="/" />
+      </div>
+      <!-- <Image src={Jeger4} alt="/" /> -->
+      <div class="grid-inner">
+        <Image width="340" src={Jeger5} alt="/" />
+        <Image width="340" src={Jeger6} alt="/" />
+        <Image width="340" src={Jeger7} alt="/" />
+        <Image width="340" src={Jeger8} alt="/" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .jeg_er_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-columns: 2fr 3fr; */
+    gap: 1rem;
+    justify-self:;
+    /* padding: 1rem; */
+    /* align-items: end; */
+    /* background: #ffe7e7; */
+    /* z-index: 2; */
+
+    p {
+      max-width: 500px;
+      /* grid-column: 2; */
+      text-wrap: balance;
+      color: #000;
+      font-family: Helvetica;
+      font-size: 1.5625rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      /* justify-self: end; */
+    }
+  }
+  .jeg-er {
+    /* margin: 0 100px; */
+    padding: 3rem;
+  }
+  section {
+    background: #ffe7e7;
+  }
+  .content {
+    background-color: #ffe7e7;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 1rem;
+    padding: 0 100px;
+  }
+
+  .evner {
+    position: sticky;
+    top: 50%;
+    /* align-self: start; */
+    /* margin-top: 10rem; */
+    background-color: #ffe7e7;
+    /* min-height: 100svh; */
+  }
+  .jeg-er-tre-ting {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  /* .aben {
+    padding-bottom: 2rem;
+  } */
+
+  .grid-img > * {
+    /* width: 100%; */
+    /* max-height: fit-content; */
+    /* height: 100%; */
+    /* object-fit: cover; */
+    /* aspect-ratio: 9/16; */
+  }
+
+  /* .grid-img > *:last-child {
+    object-fit: scale-down;
+    object-position: top;
+    align-self: start;
+    justify-self: start;
+  } */
+  .grid-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: center;
+    gap: 1rem;
+  }
+  .grid-img {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* flex-direction: row-reverse; */
+    /* justify-content: center; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-content: center;
+  }
+  /* .grid-img-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: center;
+    gap: 1rem;
+    > * {
+    }
+  } */
+  p {
+    text-wrap: balance;
+  }
+  /* h2 {
+    font-family: Helvetica, sans-serif;
+    font-size: 94px;
+    text-transform: uppercase;
+    margin: 0px;
+  } */
+  h4 {
+    font-family: Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+  }
+  @media (min-width: 600px) {
+    .top {
+      /* margin-top: 9.25rem; */
+      display: flex;
+      justify-content: center;
+    }
+  }
+</style>

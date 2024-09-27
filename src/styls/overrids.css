@@ -1,0 +1,46 @@
+.flow {
+  > * + * {
+    margin-block-start: var(--flow-space, 1em);
+  }
+  h2 {
+    --flow-space: 2rem;
+  }
+
+  h3 {
+    --flow-space: 0.31rem;
+  }
+  p {
+    --flow-space: 0.31rem;
+  }
+  .social {
+    --flow-space: 1.69rem;
+  }
+  .content {
+    --flow-space: 1.56rem;
+  }
+  .scroll {
+    --flow-space: 4rem;
+  }
+
+  .corevalueheader {
+    --flow-space: 1.375rem;
+  }
+  .corevaluetext {
+    --flow-space: 0.625rem;
+  }
+  .readmore {
+    --flow-space: 1.375rem;
+  }
+  .knap {
+    --flow-space: 1.8rem;
+  }
+  .homecardbutten {
+    --flow-space: 2.5rem;
+  }
+  .li-gap {
+    --flow-space: 2.5rem;
+  }
+  .contakt {
+    --flow-space: 1rem;
+  }
+}

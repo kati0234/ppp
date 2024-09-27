@@ -1,0 +1,42 @@
+---
+import "../styls/global.css";
+const { title } = Astro.props;
+import Header from "../componenter/Header.astro";
+import Fotter from "../componenter/Fotter.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Header />
+    <main><slot /></main>
+    <Fotter />
+    <!-- <div class="mf-container"></div> -->
+  </body>
+</html>
+
+<style>
+  @layer components {
+    body {
+      display: grid;
+      grid-template-columns: [full-start]1fr [content] minmax(0, 1200px) 1fr [full-end];
+
+      header,
+      footer,
+      main,
+      .full-bleed {
+        grid-column: full;
+        display: grid;
+        grid-template-columns: subgrid;
+
+        > *:not(&) {
+          grid-column: content;
+        }
+      }
+    }
+  }
+</style>
