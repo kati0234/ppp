@@ -3,8 +3,9 @@
 ---
 
 <section class="full-bleed">
+  <h3>cv</h3>
   <div class="grid">
-    <h3>cv</h3>
+    <div></div>
     <dl class="one">
       <h4>uddannelse</h4>
       <div class="item">
@@ -66,12 +67,6 @@
   h3 {
     justify-self: start;
   }
-  /* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: system-ui;
-  } */
 
   section {
     background-color: azure;
@@ -101,27 +96,35 @@
   .grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
-    place-items: center;
+    margin: 3rem 3rem 0 3rem;
     align-items: start;
   }
 
+  h4 {
+    margin-top: 1rem;
+  }
+
   @media (min-width: 800px) {
+    h4 {
+      margin-top: 0rem;
+    }
     h3 {
       justify-self: start;
     }
     section {
-      /* height: 100svh; */
       background-color: azure;
       padding: 4rem;
       place-content: center;
     }
+
     .grid {
+      gap: 1rem;
+      place-items: normal;
+      margin: 3rem 3rem 0 3rem;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      place-items: center;
-      align-items: start;
+      grid-template-columns: 0.5fr 0.5fr 0.5fr;
     }
+
     .one {
       grid-column: 2;
     }

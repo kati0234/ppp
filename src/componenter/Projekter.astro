@@ -12,7 +12,7 @@ import figmaopg from "../assets/images/figmaopg.png";
       <h3>cases</h3>
       <p>Et par cases fra min tid på KEA.</p>
     </div>
-    <article>
+    <article class="inner-grid">
       <Card
         img={porter.src}
         title="Portfolio"
@@ -26,33 +26,13 @@ import figmaopg from "../assets/images/figmaopg.png";
         url="https://implementer-figma-opgave.netlify.app/"
       />
     </article>
-    <!-- <Acordian /> -->
   </div>
 </section>
 <style>
-  article {
-    align-content: center;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    padding: 0 4rem;
-    /* grid-template-rows: 1fr 1fr; */
-    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
-  }
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
   section {
-    /* height: 100svh; */
-    padding: 4rem;
-    * > {
-      grid-column: content;
-    }
+    padding: 4rem 4rem 8rem 4rem;
   }
-  p {
-    margin-top: 3rem;
-  }
+
   .img-container {
     width: 100%;
   }
@@ -61,21 +41,24 @@ import figmaopg from "../assets/images/figmaopg.png";
     height: 100%;
   }
 
-  /* article {
-    border: none;
-    box-shadow: none;
-    padding: 3rem;
-    display: flex;
-    gap: 1.5rem;
-  } */
+  .inner-grid {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    gap: 4rem;
+  }
+
+  .flow {
+    p {
+      padding-top: 0.8rem;
+    }
+  }
 
   @media (min-width: 800px) {
-    .grid {
-      /* align-content: center; */
+    .inner-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      /* grid-template-rows: 1fr 1fr; */
-      /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem;
     }
   }
 </style>

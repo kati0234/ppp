@@ -29,9 +29,8 @@
 
 <style>
   section {
-    /* height: 100vh; */
     background: var(--farve-5);
-    padding: 3rem;
+    padding: 4rem;
   }
   hr {
     height: 0;
@@ -48,9 +47,15 @@
   .inner {
     margin: 3rem 3rem 0 3rem;
     display: grid;
-    grid-template-columns: 0.5fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
-
   @media (min-width: 800px) {
+    .inner {
+      margin: 3rem 3rem 0 3rem;
+      display: grid;
+      grid-template-columns: 0.5fr 1fr;
+      gap: 1rem;
+    }
   }
 </style>
