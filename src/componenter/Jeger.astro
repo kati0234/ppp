@@ -11,13 +11,15 @@ import Jeger8 from "../assets/images/jeger8.jpeg";
 import Jeger9 from "../assets/images/jeger9.jpeg";
 ---
 
-<section class="jeg-er">
-  <div class="jeg_er_content">
-    <h3>jeg er..</h3>
-    <p>
-      katinka alberte stürup-pedersen jeg er 23 år, bor på vesterbro med 3
-      romies, og min ynglings favre er lysserød
-    </p>
+<section class="jeg-er full-bleed">
+  <div class="jeg_er_content full-bleed">
+    <div class="jeg-er-inner">
+      <h3>jeg er..</h3>
+      <p>
+        katinka alberte stürup-pedersen jeg er 23 år, bor på vesterbro med 3
+        romies, og min ynglings favre er lysserød
+      </p>
+    </div>
   </div>
   <div class="content">
     <div class="jeg-er-tre-ting">
@@ -53,76 +55,57 @@ import Jeger9 from "../assets/images/jeger9.jpeg";
 </section>
 
 <style>
-  .jeg_er_content {
+  .jeg-er-inner {
+    grid-column: content;
+    padding: 5rem 0;
     display: grid;
-    grid-template-columns: 1fr;
-    /* grid-template-columns: 2fr 3fr; */
+    grid-template-columns: 2fr 3fr;
+    place-self: center;
+    align-items: center;
     gap: 1rem;
-    justify-self:;
-    /* padding: 1rem; */
-    /* align-items: end; */
-    /* background: #ffe7e7; */
-    /* z-index: 2; */
-
     p {
-      max-width: 500px;
-      /* grid-column: 2; */
-      text-wrap: balance;
-      color: #000;
-      font-family: Helvetica;
-      font-size: 1.5625rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      /* justify-self: end; */
+      /* max-width: 400px; */
+      padding: 0rem 2rem;
+    }
+  }
+  .jeg_er_content {
+    background-color: var(--farve-5);
+    color: var(--sort);
+
+    /* justify-self:; */
+    /* h3 {
+      grid-column: 1;
+    } */
+    h3 {
+      /* color: var(--hvid); */
     }
   }
   .jeg-er {
-    /* margin: 0 100px; */
-    padding: 3rem;
+    /* padding: 3rem; */
   }
   section {
-    background: #ffe7e7;
+    background: var(--farve-6);
   }
   .content {
-    background-color: #ffe7e7;
+    background-color: var(--farve-6);
     display: grid;
     grid-template-columns: 2fr 3fr;
     gap: 1rem;
-    padding: 0 100px;
+    /* padding: 0 100px; */
   }
 
   .evner {
     position: sticky;
-    top: 50%;
-    /* align-self: start; */
-    /* margin-top: 10rem; */
-    background-color: #ffe7e7;
-    /* min-height: 100svh; */
+    top: 40%;
+    background-color: var(--farve-6);
   }
   .jeg-er-tre-ting {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-  }
-  /* .aben {
-    padding-bottom: 2rem;
-  } */
-
-  .grid-img > * {
-    /* width: 100%; */
-    /* max-height: fit-content; */
-    /* height: 100%; */
-    /* object-fit: cover; */
-    /* aspect-ratio: 9/16; */
+    padding-bottom: 3rem;
   }
 
-  /* .grid-img > *:last-child {
-    object-fit: scale-down;
-    object-position: top;
-    align-self: start;
-    justify-self: start;
-  } */
   .grid-inner {
     display: grid;
     grid-template-columns: 1fr;
@@ -130,39 +113,18 @@ import Jeger9 from "../assets/images/jeger9.jpeg";
     gap: 1rem;
   }
   .grid-img {
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-    /* flex-direction: row-reverse; */
-    /* justify-content: center; */
+    padding: 3rem 2rem;
+    margin-bottom: 3rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     align-content: center;
   }
-  /* .grid-img-inner {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-content: center;
-    gap: 1rem;
-    > * {
-    }
-  } */
+
   p {
     text-wrap: balance;
   }
-  /* h2 {
-    font-family: Helvetica, sans-serif;
-    font-size: 94px;
-    text-transform: uppercase;
-    margin: 0px;
-  } */
-  h4 {
-    font-family: Helvetica, sans-serif;
-    font-size: 2rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    margin-bottom: 0px;
-  }
+
   @media (min-width: 600px) {
     .top {
       /* margin-top: 9.25rem; */

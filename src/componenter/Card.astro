@@ -2,7 +2,7 @@
 const { img, title, text, url } = Astro.props;
 ---
 
-<div class="grid">
+<!-- <div class="grid">
   <img src={img} alt="" />
 
   <div class="text">
@@ -10,17 +10,48 @@ const { img, title, text, url } = Astro.props;
     <p>{text}</p>
     <a href={url}>gå til side</a>
   </div>
+</div> -->
+<div class="grid">
+  <div class="text">
+    <h5>{title}</h5>
+    <p>{text}</p>
+    <a href={url}>gå til side</a>
+  </div>
+  <div class="cirkel">
+    <img src={img} alt="" />
+  </div>
 </div>
 <style>
+  .cirkel {
+    justify-self: end;
+    aspect-ratio: 1/1;
+  }
+  img {
+    max-height: 200px;
+    max-width: 200px;
+    border-radius: 100%;
+    /* aspect-ratio: 1/1; */
+    object-fit: cover;
+    align-self: end;
+    place-self: end;
+    justify-self: end;
+  }
   .grid {
+    border-radius: 2rem;
+    /* padding: 2rem 2rem 1rem 2rem; */
+    padding: 1.5rem;
     display: grid;
-    grid-template-rows: repeat(2, auto);
-    background: #8c2b32;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    /* grid-template-rows: repeat(2, auto); */
+    background: var(--farve-7);
 
     .text {
+      color: var(--sort);
       --flow-space: 0.8rem;
-      padding: 2.5rem;
+      padding: 2rem 0;
       display: flex;
+      justify-content: space-between;
       flex-direction: column;
 
       > * + * {
@@ -29,12 +60,13 @@ const { img, title, text, url } = Astro.props;
       }
 
       > a {
-        place-self: end;
+        /* justify-self: end;
+        place-self: end; */
       }
     }
   }
   h5 {
-    color: #fff;
+    color: var(--sort);
     font-family: Helvetica;
     font-size: 1.5625rem;
     font-style: normal;
@@ -42,19 +74,19 @@ const { img, title, text, url } = Astro.props;
     line-height: normal;
     text-transform: uppercase;
   }
-  p {
-    color: #fff;
+  /* p {
+    color: var(--sort);
     font-family: Helvetica;
     font-size: 0.9375rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     text-transform: lowercase;
-  }
+  } */
   a {
-    place-self: end;
+    /* place-self: end; */
     list-style: none;
-    color: #fff;
+    color: var(--farve-8);
     font-family: Helvetica;
     font-size: 1.25rem;
     font-style: italic;

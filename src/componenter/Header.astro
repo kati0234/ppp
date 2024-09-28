@@ -2,4 +2,97 @@
 
 ---
 
-<header></header>
+<header>
+  <!-- <div class="inner"> -->
+  <button popovertarget="popup">kontakt</button>
+</header>
+<div class="pop" popover id="popup" class="bobel">
+  <h2>kontakt mig</h2>
+  <p>katinkaalberte@gmail.com</p>
+  <p>+42316072</p>
+</div>
+<style>
+  h2 {
+    font-size: var(--fluid-16-33);
+  }
+
+  [popover] {
+    display: none; /* Start som skjult */
+  }
+  p {
+    color: var(--sort);
+    font-size: var(--fluid-16-33);
+  }
+
+  .pop {
+    /* border-radius: 1.875rem; */
+    background: var(--farve-5);
+    /* border-radius: 1.875rem; */
+    display: flex;
+    /* padding: 2.5rem 3.75rem 3.75rem 3.75rem; */
+    /* padding: 7.5rem 8.75rem 8.75rem 8.75rem; */
+    padding: 5rem;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.625rem;
+    align-self: center;
+    justify-self: center;
+    /* align-items: center;
+    justify-content: center; */
+  }
+
+  [popover] {
+    pointer-events: none; /* Deaktiver klik når popover er skjult */
+    opacity: 0;
+    border: none;
+    translate: 0 -100%;
+    transition: 0.6s;
+    transition-property: opacity, display, translate;
+
+    &:popover-open {
+      @starting-style {
+        opacity: 0;
+        translate: 0 100%;
+      }
+      opacity: 1;
+      translate: 0 0;
+    }
+  }
+
+  [popover]::backdrop {
+    /* background: rgba(0, 0, 0, 0.5); */
+    /* background: var(  --farve-3); */
+    background: rgba(255, 231, 231, 0.422);
+    backdrop-filter: blur(16px);
+  }
+
+  button {
+    font-family: Helvetica, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: rgba(255, 105, 180, 0);
+    /* margin-bottom: 0px; */
+    font-size: var(--fluid-16-33);
+    /* border-radius: 3.4375rem; */
+    padding: 1rem 1.9375rem;
+    width: fit-content;
+    height: fit-content;
+    color: var(--farve-1);
+    /* background: var(--farve-3); */
+    border: none;
+    /* padding: 1rem 1.9375rem;
+    &:hover {
+      color: var(--button-text-primery);
+      background-color: var(--button-bg-primery);
+    } */
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: end;
+    padding: 30px;
+    padding-left: 1rem;
+  }
+</style>

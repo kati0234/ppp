@@ -1,14 +1,14 @@
 ---
 import { Image } from "astro:assets";
 import porter from "../assets/images/porter.png";
-import Acordian from "../componenter/Acordian.astro";
+
 import Card from "./Card.astro";
 import figmaopg from "../assets/images/figmaopg.png";
 ---
 
-<section>
+<section class="full-bleed">
   <div class="grid">
-    <div>
+    <div class="flow">
       <h3>cases</h3>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
@@ -19,20 +19,43 @@ import figmaopg from "../assets/images/figmaopg.png";
       <Card
         img={porter.src}
         title="portefolie"
-        text="med fokus på lalala"
+        text="med fukus på design og implemtring"
         url="https://tinkastudios.dk/kea/06_portfolio/porterfolie/index.html"
       />
-      <Card img={figmaopg.src} title="portefolie" text="med fokus på lalala" />
+      <Card
+        img={figmaopg.src}
+        title="fra figma til kode"
+        text="Med fokus på at oversætte figma design til kode"
+        url="https://implementer-figma-opgave.netlify.app/"
+      />
     </article>
     <!-- <Acordian /> -->
   </div>
 </section>
 <style>
+  article {
+    align-content: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 0 4rem;
+    /* grid-template-rows: 1fr 1fr; */
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
   section {
     height: 100svh;
-    padding: 3rem;
+    padding: 4rem;
+    * > {
+      grid-column: content;
+    }
   }
-
+  p {
+    margin-top: 3rem;
+  }
   .img-container {
     width: 100%;
   }
@@ -41,8 +64,21 @@ import figmaopg from "../assets/images/figmaopg.png";
     height: 100%;
   }
 
-  article {
+  /* article {
+    border: none;
+    box-shadow: none;
+    padding: 3rem;
     display: flex;
     gap: 1.5rem;
+  } */
+
+  @media (min-width: 800px) {
+    .grid {
+      /* align-content: center; */
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      /* grid-template-rows: 1fr 1fr; */
+      /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    }
   }
 </style>

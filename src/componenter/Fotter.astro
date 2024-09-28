@@ -2,4 +2,55 @@
 
 ---
 
-<footer></footer>
+<footer>
+  <div class="grid">
+    <div class="kontakt flex">
+      <a href="mailto:katinkaalberte@gmail.com">katinkaalberte@gmail.com</a>
+      <a href="tel:42316072">42316072</a>
+    </div>
+    <div class="social">
+      <a href="https://github.com/kati0234">github</a>
+      <a
+        href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
+        >linkedin</a
+      >
+    </div>
+  </div>
+</footer>
+<style>
+  .social a {
+    padding: 1rem;
+    text-decoration: none;
+    color: #000;
+    font-family: Helvetica;
+    font-size: 1.125rem;
+  }
+  .social {
+    place-self: end;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }
+  .kontakt a {
+    text-decoration: none;
+    /* color: black;
+    color: #000; */
+    color: var(--sort);
+    font-family: Helvetica;
+    /* font-size: 2.125rem; */
+    font-size: var(--fluid-16-33);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  footer {
+    padding: 3rem;
+    border-radius: 3.125rem 3.125rem 0 0;
+    background: #ff9393;
+  }
+</style>

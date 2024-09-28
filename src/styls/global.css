@@ -3,7 +3,7 @@
 @import "overrids.css" layer(overrides);
 
 html {
-  --mellem-text-decoration: uppercase;
+  /* --mellem-text-decoration: uppercase;
   --hecapreg25-font-size: 25px;
   --hecapreg25-font-family: Helvetica, sans-serif;
   --hecapreg25-font-weight: 400;
@@ -31,7 +31,27 @@ html {
   --hecapreg40-font-size: 40px;
   --hecapreg40-font-family: Helvetica, sans-serif;
   --hecapreg40-font-weight: 400;
-  --hecapreg40-text-decoration: uppercase;
+  --hecapreg40-text-decoration: uppercase; */
+  --fluid-30-80: clamp(1.875rem, 0.788rem + 5.4348vw, 5rem);
+  --fluid-12-20: clamp(0.75rem, 0.5761rem + 0.8696vw, 1.25rem);
+  --fluid-16-33: clamp(1rem, 0.6304rem + 1.8478vw, 2.0625rem);
+  --fluid-30-64: clamp(1.875rem, 1.1359rem + 3.6957vw, 4rem);
+  --fluid-30-70: clamp(1.875rem, 1.0054rem + 4.3478vw, 4.375rem);
+  --sort: #000;
+  --hvid: #fff;
+  --farve-1: #8c2b32;
+  --farve-2: #ff9a8c;
+  --farve-3: linear-gradient(
+      0deg,
+      rgba(140, 43, 50, 0.17) 0%,
+      rgba(140, 43, 50, 0.17) 100%
+    ),
+    #fff;
+  --farve-4: #86060b;
+  --farve-5: #ffb2af;
+  --farve-6: #ffe7e7;
+  --farve-7: #ffd0d0;
+  --farve-8: #ff7097;
 
   /* slider lidt om  */
 }
@@ -39,6 +59,8 @@ html {
 p {
   font-family: Helvetica, sans-serif;
   text-wrap: pretty;
+  /* font-size: 1.25rem; */
+  font-size: var(--fluid-12-20);
 }
 
 html {
@@ -57,16 +79,36 @@ img {
   width: 100%;
   height: 100%;
 }
+h1 {
+  /* font-size: var(--fluid-30-80); */
+  font-size: var(--fluid-30-70);
+}
 
-/* body {
-  height: 100%;
-  cursor: url("../src/iconer/pil.svg"), auto;
-} */
-h3 {
-  color: #000;
+h2 {
+  color: var(--sort);
   font-family: Helvetica;
-  font-size: 5.875rem;
+  font-size: var(--fluid-30-64);
   font-weight: 400;
   text-transform: uppercase;
-  padding-bottom: 2rem;
+}
+h3 {
+  color: var(--sort);
+  font-family: Helvetica;
+  font-size: var(--fluid-30-64);
+  font-weight: 400;
+  text-transform: uppercase;
+  /* padding-bottom: 2rem; */
+}
+
+h4 {
+  font-family: Helvetica, sans-serif;
+  /* font-size: 2rem; */
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  font-size: var(--fluid-16-33);
+}
+a {
+  text-decoration: none;
+  color: #86060b;
 }
